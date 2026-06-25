@@ -1,0 +1,8 @@
+.obsidian
+.DS_Store
+.env
+
+# Binaires COBOL compiles
+MENU
+src/programmes/EDITRAPP
+src/programmes/CRUDCLI

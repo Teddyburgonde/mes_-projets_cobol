@@ -1,0 +1,16 @@
+services:
+  prets_db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: prets_db
+      POSTGRES_USER: prets_user
+      POSTGRES_PASSWORD: prets_pass
+    volumes:
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+      - ./sql/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql
+      - prets_volume:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  prets_volume:
