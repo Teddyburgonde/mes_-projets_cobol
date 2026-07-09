@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 30px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 15px;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #34495e;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  border-bottom: 2px solid #bdc3c7;
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: #2c3e50;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.variables-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.variable {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  padding: 15px;
+  border-left: 4px solid #4caf50;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.variable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.variable strong {
+  display: block;
+  font-size: 1.1em;
+  color: #2e7d32;
+  margin-bottom: 5px;
+}
+
+.variable .meta {
+  font-size: 0.9em;
+  color: #666;
+  font-family: 'Courier New', monospace;
+}
+
+.procedures-container {
+  margin-bottom: 30px;
+}
+
+.procedure {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 4px solid #2196f3;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.procedure h3 {
+  color: #1565c0;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.procedure pre {
+  background: white;
+  padding: 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin: 0;
+  border: 1px solid #ccc;
+}
+
+.procedure code {
+  color: #333;
+}
+
+.procedure h4 {
+  color: #1565c0;
+  margin: 15px 0 10px 0;
+  font-size: 1.05em;
+}
+
+.procedure-description {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  border-left: 3px solid #4caf50;
+}
+
+.description-text {
+  color: #333;
+  white-space: pre-wrap;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+.procedure-code {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 15px;
+  border-radius: 4px;
+  border-left: 3px solid #ff9800;
+}

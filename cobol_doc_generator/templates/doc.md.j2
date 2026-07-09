@@ -1,0 +1,23 @@
+# {{ program.program_id }}
+
+## Variables
+
+{% for var in program.variables -%}
+- **{{ var.name }}** (Level: {{ var.level }}, PIC: {{ var.pic }})
+{% endfor %}
+
+## Procédures
+{% for proc in program.procedures -%}
+
+### {{ proc.name }}
+
+**Description:**
+```
+{{ proc.description }}
+```
+
+**Code COBOL:**
+```cobol
+{{ proc.content }}
+```
+{% endfor %}

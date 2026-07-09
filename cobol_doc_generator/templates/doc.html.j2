@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>{{ program.program_id }}</title>
+</head>
+<body>
+    <h1>{{ program.program_id }}</h1>
+
+    <h2>📋 Variables</h2>
+    <div class="variables-container">
+    {% for var in program.variables -%}
+        <div class="variable">
+            <strong>{{ var.name }}</strong>
+            <span class="meta">(Level: {{ var.level }}, PIC: {{ var.pic }})</span>
+        </div>
+    {% endfor %}
+    </div>
+
+    <h2>⚙️ Procédures</h2>
+    <div class="procedures-container">
+    {% for proc in program.procedures -%}
+        <div class="procedure">
+            <h3>{{ proc.name }}</h3>
+
+            <div class="procedure-description">
+                <h4>📝 Description</h4>
+                <div class="description-text">{{ proc.description }}</div>
+            </div>
+
+            <div class="procedure-code">
+                <h4>💻 Code COBOL</h4>
+                <pre><code>{{ proc.content }}</code></pre>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>
